@@ -318,7 +318,7 @@ As mentioned above, in general the only properties that the EPOS GUI will suppor
 
 #### Links
 
-`@epos_links` is a special type of property introduced to support the addition of (hyper)links that require an individual object per link to capture the `href`, `label`, `type` and `authenticatedDownload` (whether the link should be called with authentication headers set, including the EPOS authentication token) properties: 
+`@epos_links` is a special type of property introduced to support the addition of (hyper)links that require an individual object per link to capture the `href`, `label`, `group`, `type` and `authenticatedDownload` (whether the link should be called with authentication headers set, including the EPOS authentication token) properties: 
 
 ```json
 "features": [
@@ -339,18 +339,21 @@ As mentioned above, in general the only properties that the EPOS GUI will suppor
                     {
                         "href": "http://volobsis.ipgp.fr/volcano-bullexcep.pdf",
                         "label": "Download",
+                        "group": "Downloads Column",
                         "type": "application/pdf",
                         "authenticatedDownload": true
                     },
                     {
                         "href": "https://sandbox.zenodo.org/20170703.unw.png",
                         "label": "Preview",
+                        "group": "Preview sColumn",
                         "type": "image/x-icon",
                         "authenticatedDownload": false
                     },
                     {
                         "href": "https://creativecommons.org/licenses/by-sa/4.0/",
                         "label": "License",
+                        "group": "Licenses Column",
                         "type": "text/html",
                         "authenticatedDownload": false
                     }
@@ -434,18 +437,21 @@ As mentioned above, in general the only properties that the EPOS GUI will suppor
                     {
                         "href": "http://volobsis.ipgp.fr/volcano-bullexcep.pdf",
                         "label": "Download",
+                        "group": "Downloads Column",
                         "type": "application/pdf",
                         "authenticatedDownload": true
                     },
                     {
                         "href": "https://sandbox.zenodo.org/20170703.unw.png",
                         "label": "Preview",
+                        "group": "Previews Column",
                         "type": "image/x-icon",
                         "authenticatedDownload": false
                     },
                     {
                         "href": "https://creativecommons.org/licenses/by-sa/4.0/",
                         "label": "License",
+                        "group": "Licenses Column",
                         "type": "text/html",
                         "authenticatedDownload": false
                     }
@@ -500,5 +506,3 @@ As mentioned above, in general the only properties that the EPOS GUI will suppor
     ]
 }
 ```
-
-
